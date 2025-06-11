@@ -1,0 +1,9 @@
+C:\Users\Denis\source\repos\IndVasilch\VetData\bin\Debug\VetData.dll
+C:\Users\Denis\source\repos\IndVasilch\VetData\bin\Debug\VetData.pdb
+C:\Users\Denis\source\repos\IndVasilch\VetData\obj\Debug\VetData.csproj.AssemblyReference.cache
+C:\Users\Denis\source\repos\IndVasilch\VetData\obj\Debug\VetData.csproj.CoreCompileInputs.cache
+C:\Users\Denis\source\repos\IndVasilch\VetData\obj\Debug\VetData.dll
+C:\Users\Denis\source\repos\IndVasilch\VetData\obj\Debug\VetData.pdb
+C:\Users\Denis\source\repos\IndVasilch\VetData\bin\Debug\VetCore.dll
+C:\Users\Denis\source\repos\IndVasilch\VetData\bin\Debug\VetCore.pdb
+C:\Users\Denis\source\repos\IndVasilch\VetData\obj\Debug\VetData.csproj.Up2Date

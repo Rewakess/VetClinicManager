@@ -1,0 +1,6 @@
+C:\Users\Denis\source\repos\IndVasilch\VetCore\bin\Debug\VetCore.dll
+C:\Users\Denis\source\repos\IndVasilch\VetCore\bin\Debug\VetCore.pdb
+C:\Users\Denis\source\repos\IndVasilch\VetCore\obj\Debug\VetCore.csproj.AssemblyReference.cache
+C:\Users\Denis\source\repos\IndVasilch\VetCore\obj\Debug\VetCore.csproj.CoreCompileInputs.cache
+C:\Users\Denis\source\repos\IndVasilch\VetCore\obj\Debug\VetCore.dll
+C:\Users\Denis\source\repos\IndVasilch\VetCore\obj\Debug\VetCore.pdb

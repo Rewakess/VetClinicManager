@@ -1,0 +1,83 @@
+﻿<Window x:Class="VetWindows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VetWindows"
+        mc:Ignorable="d"
+        Title="Ветеринарная клиника - расписание визитов" Height="600" Width="1050"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button x:Name="LoadDatabaseButton" Content="Загрузить базу" Click="LoadDatabaseButton_Click" Padding="10,5" Margin="0,0,10,0"/>
+                <Button x:Name="ShowOwnersButton" Content="Показать клиентов и питомцев" Click="ShowOwnersButton_Click" Padding="10,5" Margin="0,0,10,0"/>
+                <Button x:Name="AddVisitButton" Content="Добавить визит" Click="AddVisitButton_Click" Padding="10,5" Margin="0,0,10,0"/>
+                <Button x:Name= "DeleteVisitButton" Content="Удалить визит" Click="DeleteVisitButton_Click" Padding="8,4" Margin="0,0,10,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                <Button x:Name="ShowUpcomingVisitsButton" Click="ShowUpcomingVisitsButton_Click" Padding="6,3" FontSize="11" Margin="0,0,5,0" Width="85" Height="40">
+                    <TextBlock TextAlignment="Center">
+                        Будущие
+                        <LineBreak/>
+                        визиты
+                    </TextBlock>
+                </Button>
+
+                <Button x:Name="ShowAllVisitsButton" Click="ShowAllVisitsButton_Click" Padding="6,3" FontSize="11" Margin="0,0,0,0" Width="85" Height="40">
+                    <TextBlock TextAlignment="Center">
+                        Все
+                        <LineBreak/>
+                        Визиты
+                    </TextBlock>
+                </Button>
+                <Button x:Name="ExportAllVisitsButton" Click="ExportAllVisitsButton_Click" Padding="6,3" FontSize="11" Margin="5,0,0,0" Width="85" Height="40">
+                    <TextBlock TextAlignment="Center">
+                        Экспорт
+                        <LineBreak/>
+                        визитов в csv
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <DataGrid x:Name="visitsDataGrid" 
+                  Grid.Row="1" 
+                  Margin="10"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  AlternatingRowBackground="AliceBlue"
+                  GridLinesVisibility="All"
+                  CanUserResizeRows="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  SelectionMode="Single"
+                  SelectionUnit="FullRow"
+                  HeadersVisibility="Column"
+                  RowHeaderWidth="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="50"/>
+                <DataGridTextColumn Header="Пмтомец" Binding="{Binding PetName}" Width="120"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="70"/>
+                <DataGridTextColumn Header="Вид питомца" Binding="{Binding AnimalType}" Width="100"/>
+                <DataGridTextColumn Header="Порода" Binding="{Binding Breed}" Width="120"/>
+                <DataGridTextColumn Header="Дата визита" Binding="{Binding VisitTime, StringFormat={}{0:dd.MM.yyyy HH:mm}}" Width="150"/>
+                <DataGridTextColumn Header="Причина" Binding="{Binding Reason}" Width="150"/>
+                <DataGridTextColumn Header="Владелец" Binding="{Binding OwnerName}" Width="150"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding OwnerPhone}" Width="120" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
